@@ -2,31 +2,20 @@ import React, { Fragment } from "react";
 import { Countries } from "./countries";
 
 class AgeSelect extends React.Component {
-  // constructor() {
-  //   super();
-  //   // this.goToStore = this.goToStore.bind(this);
-  // }
-
   dob = React.createRef();
   country = React.createRef();
 
-  handleChange = event => {
+  goAhead = event => {
+    //Preventing from reloading
+    event.preventDefault();
+
     let dt1 = new Date();
-    let dt2 = new Date(event.target.value);
-    // console.log(this.diff_weeks(dt2, dt1));
+    let dt2 = new Date(this.dob.current.value);
     const diff = this.diff_weeks(dt2, dt1);
     this.props.updateDate(diff);
 
-    // console.log(diff);
-  };
-
-  handleChange2 = event => {
-    // const diff = this.diff_weeks(dt2, dt1);
-    // this.props.updateDate(diff);
-
-    const countryCode = event.target.value;
-    const year = Countries.countries.find(code => code.Code == countryCode);
-    // console.log(year.Weeks);
+    const countryCode = this.country.current.value;
+    const year = Countries.countries.find(code => code.Code === countryCode);
     this.props.updateDate2(year.Weeks);
   };
 
@@ -38,22 +27,12 @@ class AgeSelect extends React.Component {
 
   render() {
     return (
-      <form className="store-selector">
+      <form onSubmit={this.goAhead}>
         {/* notice how we didn't put parenthesis */}
         <h2>Select your Country & DOB</h2>
-        <input
-          type="date"
-          required
-          ref={this.dob}
-          onChange={this.handleChange}
-        />
-        <select
-          className="form-control"
-          required
-          ref={this.country}
-          onChange={this.handleChange2}
-        >
-          <option>---select---</option>
+        <input type="date" required ref={this.dob} />
+        <select required ref={this.country}>
+          <option>Chose your Country</option>
           {Countries.countries &&
             Countries.countries.map((h, i) => (
               <option key={i} value={h.Code}>
@@ -62,7 +41,7 @@ class AgeSelect extends React.Component {
             ))}
         </select>
 
-        {/* <button type="submit">GO Ahead</button> */}
+        <button type="submit">GO Ahead</button>
       </form>
     );
   }

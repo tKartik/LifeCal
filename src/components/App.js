@@ -7,9 +7,21 @@ export default class App extends React.Component {
   state = {
     totalWeeks: "",
     weeks: "",
-    totalWeeks: "",
     country: ""
   };
+
+  componentDidMount() {
+    const weeks = localStorage.getItem("weeks");
+    const totalWeeks = localStorage.getItem("totalWeeks");
+    this.setState({ weeks, totalWeeks });
+  }
+
+  componentDidUpdate() {
+    // const { weeks, totalWeeks } = this.state;
+    console.log(this.state.totalWeeks);
+    localStorage.setItem("totalWeeks", this.state.totalWeeks);
+    localStorage.setItem("weeks", this.state.weeks);
+  }
 
   updateDate = updatedWeek => {
     let weeks = this.state.weeks;
