@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/LifeCal/static/css/main.a085a1f7.chunk.css",
-    "main.js": "/LifeCal/static/js/main.029270cd.chunk.js",
-    "main.js.map": "/LifeCal/static/js/main.029270cd.chunk.js.map",
+    "main.css": "/LifeCal/static/css/main.06ab75d9.chunk.css",
+    "main.js": "/LifeCal/static/js/main.876a60ed.chunk.js",
+    "main.js.map": "/LifeCal/static/js/main.876a60ed.chunk.js.map",
     "runtime~main.js": "/LifeCal/static/js/runtime~main.4aceaac4.js",
     "runtime~main.js.map": "/LifeCal/static/js/runtime~main.4aceaac4.js.map",
-    "static/js/2.bfb391e6.chunk.js": "/LifeCal/static/js/2.bfb391e6.chunk.js",
-    "static/js/2.bfb391e6.chunk.js.map": "/LifeCal/static/js/2.bfb391e6.chunk.js.map",
+    "static/js/2.45394081.chunk.js": "/LifeCal/static/js/2.45394081.chunk.js",
+    "static/js/2.45394081.chunk.js.map": "/LifeCal/static/js/2.45394081.chunk.js.map",
     "index.html": "/LifeCal/index.html",
-    "precache-manifest.5a442e55053611cfa019a032b6804369.js": "/LifeCal/precache-manifest.5a442e55053611cfa019a032b6804369.js",
+    "precache-manifest.6378a2863de60b205b637b1ea4c9dea5.js": "/LifeCal/precache-manifest.6378a2863de60b205b637b1ea4c9dea5.js",
     "service-worker.js": "/LifeCal/service-worker.js",
-    "static/css/main.a085a1f7.chunk.css.map": "/LifeCal/static/css/main.a085a1f7.chunk.css.map"
+    "static/css/main.06ab75d9.chunk.css.map": "/LifeCal/static/css/main.06ab75d9.chunk.css.map"
   }
 }
