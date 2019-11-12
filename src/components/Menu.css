@@ -8,12 +8,17 @@
     top: 0;
     left: 0;
     transition: transform .3s
-                cubic-bezier(0, .52, 0, 1);
+    cubic-bezier(0, .52, 0, 1);
     overflow: scroll;
     z-index: 1000;
-    padding: 20px;
+    padding: 20px 20px 20px 0;  
+    align-items: center;
   }
-   
+  
+  .padContainer{
+    width:80%;
+  }
+  
   #flyoutMenu.hide {
     transform: translate3d(-100vw, 0, 0);
   }
@@ -29,34 +34,64 @@
     width: fit-content;
     position: absolute;
     right: 20px;
+    cursor:pointer;
   }
    
-  .enter{
+  .enterName{
     width: max-content;
-    margin-bottom: 10px;
-    font-size: 1.3em;
+    margin-bottom: 8px;
+    font-size: 3vmin;
+    color:#5F5F5F;
+    font-weight: 500;
   }
 
+  .footer{
+    display: flex;
+    border-top: 1px solid grey;
+    position: absolute;
+    bottom: 10px;
+    width: 80%;
+    padding: 4px;
+    font-size: 2vmin;
+    justify-content: center;
+  }
+
+
   input[type=text]{
-    padding: 6px;
-    width:25vw;
-    border-radius: 20px;
+    padding: 1vmin 1vmin 1vmin 2.5vmin;
+    width:100%;
+    border-radius: 4vmin;
     border: 1px solid #707070;
+    font-size: 2.5vmin;
   }
   
   select{
-    padding:6px;
-    width:25vw;
+    font-size: 2.2vmin;
+    padding:1vmin 1vmin 1vmin 2.5vmin;
+    width:100%;
     margin:10px 0 10px 0;
-    border-radius: 20px;
+    border-radius: 4vmin;
   }
   
   input[type=date]{
-    padding: 6px;
+    font-size: 1.9vmin;
+    padding: 1vmin 1vmin 1vmin 2.5vmin;
     border: 1px solid #707070;
-    width:25vw;
-    border-radius: 20px;
-    
+    width:100%;
+    border-radius: 4vmin;
+  }
+
+  button {
+    background-color: #2E90FF; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4vmin;
+    display: inline-block;
+    font-size: 2vmin;
+    cursor: pointer;
   }
   /* #flyoutMenu h2 a {
     color: #333;

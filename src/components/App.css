@@ -24,11 +24,12 @@ html {
   /* border: 10px solid black; */
 }
 
-.button{
+.buttonM{
   position:fixed;
   z-index: 1000;
   bottom:2vh;
   left: 2vh;
+  display: flex;
 }
 
 .list{
@@ -43,6 +44,11 @@ html {
   padding: 20px;
 }
 
-.form1{
-  width: 20%
+.logo{
+  position: absolute;
+  z-index: 1000;
+  bottom:2vh;
+  right: 2vh;
+  height: 3.2vh;
+  border-radius: 50%;
 }

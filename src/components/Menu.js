@@ -48,15 +48,15 @@ class Menu extends React.Component {
         <div onMouseDown={this.props.handleMouseDown} className="cross">
           <Fontawesome name="times" size="2x"></Fontawesome>
         </div>
-        <div>
+        <div className="padContainer">
           <form onSubmit={this.goAhead} className="form1">
             {/* notice how we didn't put parenthesis */}
-            <p className="enter" style={{ marginTop: "50px" }}>
-              Enter your Name
+            <p className="enterName" style={{ marginTop: "8vmin" }}>
+              Enter your name
             </p>
             <input type="text" name="name" ref={this.nWord}></input>
 
-            <p className="enter">Select your Country & DOB</p>
+            <p className="enterName">Select your Country & D.O.B.</p>
             <input type="date" required ref={this.dob} />
             <select required ref={this.country}>
               <option>Chose your Country</option>
@@ -70,6 +70,12 @@ class Menu extends React.Component {
 
             <button type="submit">GO Ahead</button>
           </form>
+          <div className="footer">
+            Created by{" "}
+            <span style={{ color: "grey" }}>
+              <a href="www.tkartik.com"> Kartik</a>
+            </span>
+          </div>
         </div>
       </div>
     );

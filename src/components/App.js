@@ -68,8 +68,19 @@ export default class App extends React.Component {
             totalWeeks={this.state.totalWeeks}
           />
         </div>
-        <div onMouseDown={this.handleMouseDown} className="button">
+        <div onMouseDown={this.handleMouseDown} className="buttonM">
           <MenuButton handleMouseDown={this.handleMouseDown} />
+        </div>
+        <div>
+          <a href="www.tkartik.com">
+            <img
+              className="logo"
+              g
+              src="./p5.jpg"
+              alt="logo"
+              className="logo"
+            ></img>
+          </a>
         </div>
         <div>
           <Name name={this.state.name}></Name>
