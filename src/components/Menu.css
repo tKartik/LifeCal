@@ -1,7 +1,9 @@
 #flyoutMenu {
-    width: 50vw;
+  display: flex;
+  flex-direction: column;
+    width: 30vw;
     height: 100vh;
-    background-color: #FFE600;
+    background-color: #F9F9F9;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +11,7 @@
                 cubic-bezier(0, .52, 0, 1);
     overflow: scroll;
     z-index: 1000;
+    padding: 20px;
   }
    
   #flyoutMenu.hide {
@@ -18,8 +21,43 @@
   #flyoutMenu.show {
     transform: translate3d(0vw, 0, 0);
     overflow: hidden;
+    box-shadow: 0 0 30px;
+    transition: transform .3s
+                cubic-bezier(0, .52, 0, 1);
+  }
+  .cross{
+    width: fit-content;
+    position: absolute;
+    right: 20px;
   }
    
+  .enter{
+    width: max-content;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  input[type=text]{
+    padding: 6px;
+    width:25vw;
+    border-radius: 20px;
+    border: 1px solid #707070;
+  }
+  
+  select{
+    padding:6px;
+    width:25vw;
+    margin:10px 0 10px 0;
+    border-radius: 20px;
+  }
+  
+  input[type=date]{
+    padding: 6px;
+    border: 1px solid #707070;
+    width:25vw;
+    border-radius: 20px;
+    
+  }
   /* #flyoutMenu h2 a {
     color: #333;
     margin-left: 15px;

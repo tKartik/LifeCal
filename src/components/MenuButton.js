@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import "./MenuButton.css";
+import Fontawesome from "react-fontawesome";
 
 class MenuButton extends Component {
   render() {
     return (
-      <button
+      <div
+        // style={{ color: "black" }}
         id="roundButton"
         // onMouseDown={this.props.handleMouseDown}
-      ></button>
+      >
+        <Fontawesome name="sliders" size="2x"></Fontawesome>
+      </div>
     );
   }
 }

@@ -56,7 +56,7 @@ export default class WeekBox extends React.Component {
     return (
       <div
         className="container"
-        onMouseDown={this.props.handleMouseDown}
+        // onMouseDown={this.props.handleMouseDown}
         ref={this.container}
       >
         {items}

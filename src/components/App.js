@@ -3,20 +3,22 @@ import WeekBox from "./WeekBox";
 import "./App.css";
 import Menu from "./Menu";
 import MenuButton from "./MenuButton";
-// import Days from "./Days";
+import Name from "./Name";
 
 export default class App extends React.Component {
   state = {
     totalWeeks: "",
     weeks: "",
     country: "",
+    name: "",
     visible: false
   };
 
   componentDidMount() {
     const weeks = localStorage.getItem("weeks");
     const totalWeeks = localStorage.getItem("totalWeeks");
-    this.setState({ weeks, totalWeeks });
+    const name = localStorage.getItem("name");
+    this.setState({ weeks, totalWeeks, name });
   }
 
   componentDidUpdate() {
@@ -24,6 +26,7 @@ export default class App extends React.Component {
     // console.log(this.state.totalWeeks);
     localStorage.setItem("totalWeeks", this.state.totalWeeks);
     localStorage.setItem("weeks", this.state.weeks);
+    localStorage.setItem("name", this.state.name);
   }
 
   toggleMenu = () => {
@@ -48,25 +51,35 @@ export default class App extends React.Component {
     totalWeeks = updatedWeek * 52;
     this.setState({ totalWeeks });
   };
+  updateName = word => {
+    let name = this.state.name;
+    name = word;
+    this.setState({ name });
+  };
 
   render() {
     // const count = countries[0]["Country Name"];
     // console.log(data[1]["2017"]);
     return (
-      <div>
-        <div className="wrapper" onMouseDown={this.handleMouseDown}>
-          <MenuButton handleMouseDown={this.handleMouseDown} />
-
+      <div className="overall">
+        <div className="wrapper">
           <WeekBox
             weeks={this.state.weeks}
             totalWeeks={this.state.totalWeeks}
-            handleMouseDown={this.handleMouseDown}
           />
+        </div>
+        <div onMouseDown={this.handleMouseDown} className="button">
+          <MenuButton handleMouseDown={this.handleMouseDown} />
+        </div>
+        <div>
+          <Name name={this.state.name}></Name>
         </div>
         <Menu
           updateDate={this.updateDate}
           updateDate2={this.updateDate2}
+          updateName={this.updateName}
           menuVisibility={this.state.visible}
+          handleMouseDown={this.handleMouseDown}
         />
       </div>
     );

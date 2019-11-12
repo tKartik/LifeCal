@@ -6,16 +6,30 @@ html {
   box-sizing: inherit;
 }
 
+.overall{
+  background-color: #f6f6f2;
+ width: 100vw;
+ height:100vh;
+ font-family: Roboto;
+}
+
 .wrapper{
   display: flex;
   flex-flow: column wrap;
   /* max-height : 100vh; */
   width: 98vw;
+  height: 100vh;
   margin: 0 auto;
   padding-top:2vw;
   /* border: 10px solid black; */
 }
 
+.button{
+  position:fixed;
+  z-index: 1000;
+  bottom:2vh;
+  left: 2vh;
+}
 
 .list{
   background-color: aquamarine;

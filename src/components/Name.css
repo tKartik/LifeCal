@@ -1,0 +1,23 @@
+.centerHeading{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.nameName{
+    font-size: 48px;
+    margin: 0;
+    color:#383838;
+}
+.nameTime{
+    font-size: 100px;
+    margin: 0 0 4px 0;
+    color:#383838;
+}
