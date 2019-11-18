@@ -21,7 +21,7 @@ export default class WeekBox extends React.Component {
     let greeting;
     if (0 < hours && hours <= 5 && newformat == "PM") {
       greeting = "Good afternoon,";
-    } else if (5 < hours && hours < 12 && newformat == "AM") {
+    } else if (4 < hours && hours < 12 && newformat == "AM") {
       greeting = "Good morning,";
     } else {
       greeting = "Good evening,";

@@ -13,12 +13,13 @@
 
 .nameName{
     font-size: 6vmin;
-    margin: 0;
+    font-weight: 600;
+    margin-top: -20px;
     color:#383838;
     text-shadow: 0 0 2px;
 }
 .nameTime{
-    font-size: 13vmin;
+    font-size: 13.2vmin;
     margin: 0 0 4px 0;
     color:#383838;
     text-shadow: 0 0 6px;

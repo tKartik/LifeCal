@@ -56,7 +56,7 @@ class Menu extends React.Component {
             </p>
             <input type="text" name="name" ref={this.nWord}></input>
 
-            <p className="enterName">Select your Country & D.O.B.</p>
+            <p className="enterName">Select your D.O.B. & Country</p>
             <input type="date" required ref={this.dob} />
             <select required ref={this.country}>
               <option>Chose your Country</option>

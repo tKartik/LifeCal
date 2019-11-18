@@ -10,7 +10,7 @@ export default class App extends React.Component {
     totalWeeks: "",
     weeks: "",
     country: "",
-    name: "",
+    name: " click on the settings button in the lower left corner to set up!",
     visible: false
   };
 
@@ -72,11 +72,11 @@ export default class App extends React.Component {
           <MenuButton handleMouseDown={this.handleMouseDown} />
         </div>
         <div>
-          <a href="www.tkartik.com">
+          <a href="https://tkartik.com/">
             <img
               className="logo"
               g
-              src="./p5.jpg"
+              src="./p5.jpg?raw=true"
               alt="logo"
               className="logo"
             ></img>
