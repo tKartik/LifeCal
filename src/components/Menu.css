@@ -39,12 +39,33 @@
    
   .enterName{
     width: max-content;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-size: 3vmin;
-    color:#5F5F5F;
+    color: #5F5F5F;
     font-weight: 500;
+    margin-top: 18px;
   }
 
+  .theme{
+    display: flex;
+    justify-content: center;
+    font-size: 3vmin;
+    margin-top: 25px;
+    color: #5F5F5F;
+    margin-bottom: 5px;
+  }
+
+  .info{
+    display: flex;
+    border-top: 1px solid grey;
+    color:#5F5F5F;
+    position: absolute;
+    bottom: 90px;
+    width: 80%;
+    padding-top: 35px;
+    font-size: 2vmin;
+    justify-content: center;
+  }
   .footer{
     display: flex;
     border-top: 1px solid grey;
@@ -70,7 +91,6 @@
     font-size: 2.2vmin;
     padding:1vmin 1vmin 1vmin 2.5vmin;
     width:100%;
-    margin:10px 0 10px 0;
     border-radius: 4vmin;
   }
   
@@ -81,6 +101,7 @@
     width:100%;
     border-radius: 4vmin;
   }
+ 
 
   button {
     background-color: #2E90FF; /* Green */
@@ -93,6 +114,7 @@
     display: inline-block;
     font-size: 2vmin;
     cursor: pointer;
+    margin-top: 26px;
   }
   input:focus, textarea:focus, select:focus{
     outline: none;
@@ -100,4 +122,10 @@
 a:link, a:visited {
   color:#5F5F5F;
   display: inline-block;
+}
+
+label{
+  font-size: 2.2vmin;
+  margin-right: 15px;
+  color:#5F5F5F;
 }

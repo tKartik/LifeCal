@@ -26,6 +26,12 @@ class Menu extends React.Component {
     this.props.updateDate2(year.Weeks);
   };
 
+  handleChange = event => {
+    console.log(event.target.value);
+    this.props.toggleTheme();
+    console.log(this.props.theme);
+  };
+
   diff_weeks = (dt2, dt1) => {
     var diff = (dt2.getTime() - dt1.getTime()) / 1000;
     diff /= 60 * 60 * 24 * 7;
@@ -52,14 +58,15 @@ class Menu extends React.Component {
           <form onSubmit={this.goAhead} className="form1">
             {/* notice how we didn't put parenthesis */}
             <p className="enterName" style={{ marginTop: "8vmin" }}>
-              Enter your name
+              Name
             </p>
             <input type="text" name="name" ref={this.nWord}></input>
 
-            <p className="enterName">Select your D.O.B. & Country</p>
+            <p className="enterName">Birthday </p>
             <input type="date" required ref={this.dob} />
+            <p className="enterName">Country of Residence</p>
             <select required ref={this.country}>
-              <option>Chose your Country</option>
+              <option>Country</option>
               {Countries.countries &&
                 Countries.countries.map((h, i) => (
                   <option key={i} value={h.Code}>
@@ -67,13 +74,45 @@ class Menu extends React.Component {
                   </option>
                 ))}
             </select>
-
-            <button type="submit">GO Ahead</button>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <button type="submit">GO Ahead</button>
+            </div>
           </form>
+
+          <div>
+            <div className="theme">Theme</div>
+            <form style={{ display: "flex", justifyContent: "center" }}>
+              <label>
+                <input
+                  type="radio"
+                  value="Dark"
+                  checked={this.props.theme === true}
+                  onChange={this.handleChange}
+                />
+                Dark
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="Light"
+                  checked={this.props.theme === false}
+                  onChange={this.handleChange}
+                />
+                Light
+              </label>
+            </form>
+          </div>
+          <div className="info">
+            LifeCal is a tab extension which aims to bring your whole life into
+            perspective. The circles represent weeks in the average lifespan of
+            a person in your country. A bitter-sweet motivational tool, to
+            remind you that life is short and you need to get going.
+          </div>
+
           <div className="footer">
-            Created by{" "}
+            Created by &nbsp;
             <span style={{ color: "grey" }}>
-              <a href="www.tkartik.com"> Kartik</a>
+              <a href="https://tkartik.com/"> Kartik</a>
             </span>
           </div>
         </div>

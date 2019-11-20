@@ -40,17 +40,48 @@ export default class WeekBox extends React.Component {
     const totalCircle = this.props.totalWeeks;
     let r = this.radOfCircle(w, h, totalCircle);
 
-    const divStyle = {
-      borderRadius: "50%",
-      padding: `${r}px`
-    };
+    // const divStyle = {
+    //   borderRadius: "50%",
+    //   padding: `${r}px`
+    // };
+
+    let wk1Color;
+    let wk2Color;
+
+    let themeC = this.props.theme;
+
+    if (themeC) {
+      // console.log(themeC);
+      wk1Color = {
+        backgroundColor: "#919191",
+        borderRadius: "50%",
+        padding: `${r}px`
+      };
+      wk2Color = {
+        backgroundColor: "#528F9A",
+        borderRadius: "50%",
+        padding: `${r}px`
+      };
+    } else {
+      // console.log(this.props.theme + "hello light");
+      wk1Color = {
+        backgroundColor: "#CECECE",
+        borderRadius: "50%",
+        padding: `${r}px`
+      };
+      wk2Color = {
+        backgroundColor: "#FFB917",
+        borderRadius: "50%",
+        padding: `${r}px`
+      };
+    }
 
     for (var i = 0; i < this.props.weeks; i++) {
       let ind = new Date().getTime();
-      items.push(<div key={ind + i} className="list2" style={divStyle} />);
+      items.push(<div key={ind + i} className="list2" style={wk1Color} />);
     }
     for (var j = 0; j < this.props.totalWeeks - this.props.weeks; j++) {
-      items.push(<div key={j} className="list1" style={divStyle} />);
+      items.push(<div key={j} className="list1" style={wk2Color} />);
     }
 
     return (

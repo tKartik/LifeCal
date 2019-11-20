@@ -4,34 +4,50 @@ import "./App.css";
 import Menu from "./Menu";
 import MenuButton from "./MenuButton";
 import Name from "./Name";
+import logo from "../assets/P5.jpg";
 
 export default class App extends React.Component {
-  state = {
-    totalWeeks: "",
-    weeks: "",
-    country: "",
-    name: " click on the settings button in the lower left corner to set up!",
-    visible: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      totalWeeks: "",
+      weeks: "",
+      country: "",
+      name: "",
+      visible: false,
+      theme: true
+    };
+  }
 
   componentDidMount() {
     const weeks = localStorage.getItem("weeks");
     const totalWeeks = localStorage.getItem("totalWeeks");
     const name = localStorage.getItem("name");
-    this.setState({ weeks, totalWeeks, name });
+
+    const theme = JSON.parse(localStorage.getItem("theme"));
+    this.setState({ weeks, totalWeeks, name, theme });
   }
 
   componentDidUpdate() {
     // const { weeks, totalWeeks } = this.state;
     // console.log(this.state.totalWeeks);
+
     localStorage.setItem("totalWeeks", this.state.totalWeeks);
     localStorage.setItem("weeks", this.state.weeks);
     localStorage.setItem("name", this.state.name);
+    localStorage.setItem("theme", this.state.theme);
   }
 
   toggleMenu = () => {
     this.setState({
       visible: !this.state.visible
+    });
+  };
+
+  toggleTheme = () => {
+    this.setState({
+      theme: !this.state.theme
     });
   };
 
@@ -60,12 +76,27 @@ export default class App extends React.Component {
   render() {
     // const count = countries[0]["Country Name"];
     // console.log(data[1]["2017"]);
+    console.log(this.state.theme);
+
+    let bgStyle;
+
+    if (this.state.theme === true) {
+      bgStyle = {
+        backgroundColor: "#3B3B3B"
+      };
+    } else if (this.state.theme === false) {
+      bgStyle = {
+        backgroundColor: "#ffffff"
+      };
+    }
+
     return (
-      <div className="overall">
+      <div style={bgStyle} className="overall">
         <div className="wrapper">
           <WeekBox
             weeks={this.state.weeks}
             totalWeeks={this.state.totalWeeks}
+            theme={this.state.theme}
           />
         </div>
         <div onMouseDown={this.handleMouseDown} className="buttonM">
@@ -73,22 +104,18 @@ export default class App extends React.Component {
         </div>
         <div>
           <a href="https://tkartik.com/">
-            <img
-              className="logo"
-              g
-              src="./p5.jpg?raw=true"
-              alt="logo"
-              className="logo"
-            ></img>
+            <img className="logo" src={logo} alt="logo" className="logo"></img>
           </a>
         </div>
         <div>
-          <Name name={this.state.name}></Name>
+          <Name name={this.state.name} theme={this.state.theme}></Name>
         </div>
         <Menu
           updateDate={this.updateDate}
           updateDate2={this.updateDate2}
           updateName={this.updateName}
+          toggleTheme={this.toggleTheme}
+          theme={this.state.theme}
           menuVisibility={this.state.visible}
           handleMouseDown={this.handleMouseDown}
         />
