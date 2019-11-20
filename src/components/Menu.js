@@ -81,7 +81,13 @@ class Menu extends React.Component {
 
           <div>
             <div className="theme">Theme</div>
-            <form style={{ display: "flex", justifyContent: "center" }}>
+            <form
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginBottom: "20px"
+              }}
+            >
               <label>
                 <input
                   type="radio"
