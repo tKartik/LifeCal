@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0dba0c2eee43674dc709adb357b3285f",
+    "revision": "8d267b424f963746491df905e3c88fe1",
     "url": "/LifeCal/index.html"
   },
   {
-    "revision": "66f64c3f8d1878979dea",
-    "url": "/LifeCal/static/css/main.cb371fff.chunk.css"
+    "revision": "031f8462de613c9012cb",
+    "url": "/LifeCal/static/css/main.995d1775.chunk.css"
   },
   {
     "revision": "5a87c8d54f48941e1b39",
     "url": "/LifeCal/static/js/2.30d5f06d.chunk.js"
   },
   {
-    "revision": "66f64c3f8d1878979dea",
-    "url": "/LifeCal/static/js/main.2bc995de.chunk.js"
+    "revision": "031f8462de613c9012cb",
+    "url": "/LifeCal/static/js/main.a5d86aef.chunk.js"
   },
   {
     "revision": "b38885b5bca2fa63a107",
