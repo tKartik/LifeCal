@@ -1,10 +1,10 @@
 import React from "react";
-import WeekBox from "./WeekBox";
+import WeekBox from "./components/WeekBox";
 import "./App.css";
-import Menu from "./Menu";
-import MenuButton from "./MenuButton";
-import Name from "./Name";
-import logo from "../assets/P5.jpg";
+import Menu from "./components/Menu";
+import MenuButton from "./components/MenuButton";
+import Name from "./components/Name";
+import logo from "./assets/P5.jpg";
 
 export default class App extends React.Component {
   constructor(props) {

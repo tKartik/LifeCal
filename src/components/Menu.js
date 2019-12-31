@@ -1,6 +1,5 @@
 import React from "react";
 import { Countries } from "./countries";
-import "./App.css";
 import "./Menu.css";
 import Fontawesome from "react-fontawesome";
 
